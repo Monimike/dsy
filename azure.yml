@@ -1,0 +1,45 @@
+# Docker Engine & Compose Installed #
+
+
+# Descargar imagen de dockerhub #
+docker pull ethnchao/nagios
+
+# Validación descargar de imagen ethnchao/nagios #
+docker image ls ethnchao/nagios
+
+#REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+#ethnchao/nagios     latest              ee9b1dbbaf99        2 years ago         1.25GB
+
+# Clonar imagen #
+docker image tag ethnchao/nagios xxxx/xxxx
+
+# Ejecución #
+docker run -p 80:80 -p 3000:3000 xxxx/xxxx:latest 
+-- Para ejecutar en background -- nohup docker run -p 80:80 -p 3000:3000 squintero/labnagios:latest > /opt/logdocker.out &
+
+# Validar proceso en ejecución #
+docker ps
+ 
+# Nagios
+http://IP/
+
+# Adagios
+http://IP/adagios
+
+# NRDP
+http://IP/nrdp
+
+# Grafana
+http://IP:3000/
+
+# NCPA (Client)
+https://ncpa-agent-address:5693/
+
+
+Nagios web login:
+username: nagiosadmin
+password: nagios
+
+Grafana web login:
+username: admin
+password: admin
